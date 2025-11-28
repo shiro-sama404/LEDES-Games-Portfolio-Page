@@ -1,11 +1,8 @@
 # 🎮 LEDES Games - Portfolio Landing Page
 
-Este é o repositório oficial da Landing Page do **LEDES Games** (Laboratório de Engenharia de Software e Desenvolvimento de Jogos) da FACOM/UFMS.
+Este é o repositório da página do **LEDES Games** (Laboratório de Engenharia de Software e Desenvolvimento de Jogos) da FACOM/UFMS.
 
 O projeto serve como portfólio para apresentar os jogos desenvolvidos pelo laboratório, a equipe e a missão institucional.
-
-![Preview do Projeto](./src/assets/hero-pantanal.jpg)
-*(Dica: Substitua o caminho acima por um print da tela inteira do site depois)*
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -59,15 +56,6 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
 ## 🚀 Deploy (GitHub Pages)
 
 Este projeto está configurado para ser hospedado gratuitamente no GitHub Pages.
-
-Para publicar uma nova versão:
-
-1.  Certifique-se de que o `vite.config.ts` tem a propriedade `base` com o nome do repositório.
-2.  Rode o comando de deploy:
-    ```bash
-    npm run deploy
-    ```
-3.  O site estará disponível em: `https://github.com/shiro-sama404/LEDES-Games-Portfolio-Page/`
 
 ## 🤝 Autores
 
