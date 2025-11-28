@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+# 🎮 LEDES Games - Portfolio Landing Page
 
-## Project info
+Este é o repositório oficial da Landing Page do **LEDES Games** (Laboratório de Engenharia de Software e Desenvolvimento de Jogos) da FACOM/UFMS.
 
-**URL**: https://lovable.dev/projects/3f47eaea-77a9-4b44-bcb4-5c83468be7a9
+O projeto serve como portfólio para apresentar os jogos desenvolvidos pelo laboratório, a equipe e a missão institucional.
 
-## How can I edit this code?
+![Preview do Projeto](./src/assets/hero-pantanal.jpg)
+*(Dica: Substitua o caminho acima por um print da tela inteira do site depois)*
 
-There are several ways of editing your application.
+## 🚀 Tecnologias Utilizadas
 
-**Use Lovable**
+O projeto foi desenvolvido utilizando as seguintes tecnologias modernas de Front-end:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3f47eaea-77a9-4b44-bcb4-5c83468be7a9) and start prompting.
+* **[React](https://reactjs.org/)** + **[Vite](https://vitejs.dev/)**: Para alta performance e desenvolvimento rápido.
+* **[TypeScript](https://www.typescriptlang.org/)**: Para tipagem estática e segurança no código.
+* **[Tailwind CSS](https://tailwindcss.com/)**: Para estilização utilitária e responsiva.
+* **[Framer Motion](https://www.framer.com/motion/)**: Para animações suaves e interações.
+* **[Shadcn/UI](https://ui.shadcn.com/)**: Componentes de interface reutilizáveis e acessíveis.
+* **[Lucide React](https://lucide.dev/)**: Biblioteca de ícones.
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📁 Estrutura do Projeto
 
-**Use your preferred IDE**
+```bash
+src/
+├── assets/        # Imagens, logos e recursos estáticos
+├── components/    # Componentes React reutilizáveis (Header, Footer, Modais)
+│   └── ui/        # Componentes base do Shadcn (Button, Dialog, etc)
+├── lib/           # Utilitários e funções auxiliares
+├── pages/         # Páginas principais da aplicação
+└── App.tsx        # Componente raiz e configuração de rotas
+````
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📦 Pré-requisitos
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Antes de começar, certifique-se de ter instalado em sua máquina:
 
-Follow these steps:
+  * [Node.js](https://nodejs.org/) (Versão LTS recomendada)
+  * Git
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🔧 Instalação e Execução
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1.  **Clone o repositório:**
 
-# Step 3: Install the necessary dependencies.
-npm i
+2.  **Instale as dependências:**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+    ```bash
+    npm install
+    ```
 
-**Edit a file directly in GitHub**
+3.  **Rode o servidor de desenvolvimento:**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+    ```bash
+    npm run dev
+    ```
 
-**Use GitHub Codespaces**
+4.  **Acesse no navegador:**
+    O terminal mostrará o link, geralmente: `http://localhost:5173/`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🚀 Deploy (GitHub Pages)
 
-## What technologies are used for this project?
+Este projeto está configurado para ser hospedado gratuitamente no GitHub Pages.
 
-This project is built with:
+Para publicar uma nova versão:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1.  Certifique-se de que o `vite.config.ts` tem a propriedade `base` com o nome do repositório.
+2.  Rode o comando de deploy:
+    ```bash
+    npm run deploy
+    ```
+3.  O site estará disponível em: `https://github.com/shiro-sama404/LEDES-Games-Portfolio-Page/`
 
-## How can I deploy this project?
+## 🤝 Autores
 
-Simply open [Lovable](https://lovable.dev/projects/3f47eaea-77a9-4b44-bcb4-5c83468be7a9) and click on Share -> Publish.
+  * **LEDES Games Team** - Desenvolvimento e Design
+  * **FACOM / UFMS** - Instituição
 
-## Can I connect a custom domain to my Lovable project?
+-----
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+© 2025 LEDES Games. Todos os direitos reservados.
