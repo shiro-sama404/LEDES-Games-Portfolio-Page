@@ -1,12 +1,13 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Play } from 'lucide-react';
+import { Gamepad2 } from 'lucide-react';
 import heroImage from '@/assets/hero-pantanal.jpg';
 
 const HeroSection = () => {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const gameLink = "https://itch.io";
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -31,7 +32,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-primary/30 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-primary/30 mb-6 rounded-full">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             <span className="text-sm font-medium text-muted-foreground">EM DESTAQUE</span>
           </div>
@@ -41,24 +42,26 @@ const HeroSection = () => {
           </h1>
 
           <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-            <span className="px-3 py-1 bg-primary/10 border border-primary/30 text-primary text-sm font-medium">
+            <span className="px-3 py-1 bg-primary/10 border border-primary/30 text-primary text-sm font-medium rounded-md">
               Sandbox
             </span>
-            <span className="px-3 py-1 bg-primary/10 border border-primary/30 text-primary text-sm font-medium">
+            <span className="px-3 py-1 bg-primary/10 border border-primary/30 text-primary text-sm font-medium rounded-md">
               Exploração
             </span>
-            <span className="px-3 py-1 bg-primary/10 border border-primary/30 text-primary text-sm font-medium">
+            <span className="px-3 py-1 bg-primary/10 border border-primary/30 text-primary text-sm font-medium rounded-md">
               Low Poly
             </span>
           </div>
 
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-2xl mx-auto">
-            Uma aventura de exploração ambientada no Pantanal.
+            Uma aventura de exploração e criatividade ambientada no vasto bioma do Pantanal.
           </p>
 
-          <Button size="lg" className="gap-2 text-lg px-8 py-6">
-            <Play className="w-5 h-5" />
-            Conheça o Jogo
+          <Button size="lg" className="gap-3 text-lg px-8 shadow-lg shadow-primary/20" asChild>
+            <a href={gameLink} target="_blank" rel="noopener noreferrer">
+              <Gamepad2 className="w-6 h-6" />
+              Jogar Agora
+            </a>
           </Button>
         </motion.div>
       </motion.div>

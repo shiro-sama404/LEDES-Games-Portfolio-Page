@@ -1,28 +1,7 @@
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Mail, MapPin, Phone } from 'lucide-react';
-import { useState } from 'react';
-import { useToast } from '@/hooks/use-toast';
+import { Mail, MapPin, Instagram, Youtube } from 'lucide-react';
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: 'Mensagem enviada!',
-      description: 'Entraremos em contato em breve.',
-    });
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   return (
     <section id="contact" className="py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -33,97 +12,107 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Entre em Contato</h2>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Interessado em colaborar ou saber mais sobre nossos projetos?
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Conecte-se Conosco</h2>
+          <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+            Encontre-nos no campus ou acompanhe nossos projetos nas redes sociais.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          
+          {/* Endereço */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex flex-col items-center text-center p-6 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
           >
-            <h3 className="text-2xl font-bold mb-6">Informações</h3>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Endereço</h4>
-                  <p className="text-foreground/70">
-                    FACOM - UFMS<br />
-                    Cidade Universitária, Campo Grande - MS
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Email</h4>
-                  <p className="text-foreground/70">ledes.games@ufms.br</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Telefone</h4>
-                  <p className="text-foreground/70">(67) 3345-7000</p>
-                </div>
-              </div>
+            <div className="w-12 h-12 bg-primary/10 border border-primary/30 flex items-center justify-center rounded-full mb-4">
+              <MapPin className="w-6 h-6 text-primary" />
             </div>
+            <h3 className="font-bold text-lg mb-2">Visite-nos</h3>
+            <p className="text-foreground/70 text-sm leading-relaxed">
+              FACOM - UFMS<br />
+              Cidade Universitária<br />
+              Campo Grande - MS
+            </p>
+            
           </motion.div>
 
-          <motion.form
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          {/* Email */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            onSubmit={handleSubmit}
-            className="space-y-4"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-col items-center text-center p-6 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
           >
-            <div>
-              <Input
-                placeholder="Nome"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                required
-                className="bg-card border-border"
-              />
+            <div className="w-12 h-12 bg-primary/10 border border-primary/30 flex items-center justify-center rounded-full mb-4">
+              <Mail className="w-6 h-6 text-primary" />
             </div>
-            <div>
-              <Input
-                type="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                required
-                className="bg-card border-border"
-              />
+            <h3 className="font-bold text-lg mb-2">Email</h3>
+            <p className="text-foreground/70 text-sm mb-4">
+              Fale com nossa equipe
+            </p>
+            <a 
+              href="mailto:ledes.games@ufms.br" 
+              className="text-primary hover:underline font-medium"
+            >
+              ledes.games@ufms.br
+            </a>
+          </motion.div>
+
+          {/* Instagram */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col items-center text-center p-6 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
+          >
+            <div className="w-12 h-12 bg-primary/10 border border-primary/30 flex items-center justify-center rounded-full mb-4">
+              <Instagram className="w-6 h-6 text-primary" />
             </div>
-            <div>
-              <Textarea
-                placeholder="Mensagem"
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                required
-                rows={6}
-                className="bg-card border-border resize-none"
-              />
+            <h3 className="font-bold text-lg mb-2">Instagram</h3>
+            <p className="text-foreground/70 text-sm mb-4">
+              Acompanhe novidades e bastidores
+            </p>
+            <a 
+              href="https://www.instagram.com/ledesfacom/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-medium"
+            >
+              @ledesfacom
+            </a>
+          </motion.div>
+
+          {/* YouTube */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex flex-col items-center text-center p-6 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
+          >
+            <div className="w-12 h-12 bg-primary/10 border border-primary/30 flex items-center justify-center rounded-full mb-4">
+              <Youtube className="w-6 h-6 text-primary" />
             </div>
-            <Button type="submit" className="w-full">
-              Enviar Mensagem
-            </Button>
-          </motion.form>
+            <h3 className="font-bold text-lg mb-2">YouTube</h3>
+            <p className="text-foreground/70 text-sm mb-4">
+              Assista nossos trailers e gameplays
+            </p>
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-medium"
+            >
+              Inscreva-se
+            </a>
+          </motion.div>
+
         </div>
       </div>
     </section>

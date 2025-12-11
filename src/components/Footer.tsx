@@ -101,30 +101,14 @@ const Footer = () => {
             </div>
 
             <div>
-              <div className="flex flex-col gap-2">
-                <div className="flex gap-2 flex-wrap">
+              <div className="flex flex-col justify-center h-full">
+                <div className="flex gap-4 flex-wrap">
                   <a
-                    href="#"
-                    className="w-10 h-10 border border-border hover:border-primary hover:bg-primary/10 flex items-center justify-center transition-all rounded-md"
-                    title="Facebook"
-                  >
-                    <Facebook className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="#"
+                    href="https://www.instagram.com/ledesfacom/"
                     className="w-10 h-10 border border-border hover:border-primary hover:bg-primary/10 flex items-center justify-center transition-all rounded-md"
                     title="Instagram"
                   >
                     <Instagram className="w-5 h-5" />
-                  </a>
-                </div>
-                <div className="flex gap-2 flex-wrap">
-                   <a
-                    href="#"
-                    className="w-10 h-10 border border-border hover:border-primary hover:bg-primary/10 flex items-center justify-center transition-all rounded-md"
-                    title="Twitter"
-                  >
-                    <Twitter className="w-5 h-5" />
                   </a>
                   <a
                     href="#"

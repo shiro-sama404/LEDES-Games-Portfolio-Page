@@ -5,8 +5,6 @@ import pantanalWorldImg from '@/assets/game-pantanal-world.jpg';
 import pantanalWordImg from '@/assets/game-pantanal-word.jpg';
 import theseusImg from '@/assets/game-theseus.jpg';
 import museumImg from '@/assets/game-museum.jpg';
-import cosmicRunnerImg from '@/assets/game-cosmic-runner.jpg';
-import codeQuestImg from '@/assets/game-code-quest.jpg';
 
 const games = [
   {
@@ -16,6 +14,17 @@ const games = [
     longDescription: 'Explore um mundo aberto em low poly inspirado no Pantanal brasileiro. Construa, descubra segredos e interaja com a fauna local em uma experiência sandbox única.',
     tags: ['Sandbox', 'Exploração', 'Low Poly'],
     image: pantanalWorldImg,
+    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    playUrl: 'https://itch.io',
+    developmentDates: {
+      start: 'Fevereiro 2025',
+      release: 'Dezembro 2025'
+    },
+    team: [
+      { name: 'Nome 1', role: 'Programador, UI Designer' },
+      { name: 'Nome 2', role: 'Game Designer' },
+      { name: 'Nome 3', role: 'Sound Designer' }
+    ]
   },
   {
     id: 2,
@@ -24,6 +33,18 @@ const games = [
     longDescription: 'Aprenda sobre o vocabulário do Pantanal enquanto se diverte com desafios de palavras. Um jogo educativo que combina aprendizado com entretenimento.',
     tags: ['Educativo', 'Puzzle', 'Palavras'],
     image: pantanalWordImg,
+    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    playUrl: 'https://itch.io',
+    developmentDates: {
+      start: 'Fevereiro 2025',
+      release: 'Dezembro 2025'
+    },
+    team: [
+      { name: 'Nome 1', role: 'Programador, UI Designer' },
+      { name: 'Nome 2', role: 'Game Designer' },
+      { name: 'Nome 3', role: 'Sound Designer' }
+    ]
+    
   },
   {
     id: 3,
@@ -32,6 +53,18 @@ const games = [
     longDescription: 'Embarque em uma jornada épica através da mitologia grega. Viva a lendária odisséia de Teseu e enfrente criaturas lendárias! Tudo isso com opções de acessibilidade.',
     tags: ['Aventura', 'Mitologia', 'Ação'],
     image: theseusImg,
+    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    playUrl: 'https://itch.io',
+    developmentDates: {
+      start: 'Fevereiro 2025',
+      release: 'Dezembro 2025'
+    },
+    team: [
+      { name: 'Nome 1', role: 'Programador, UI Designer' },
+      { name: 'Nome 2', role: 'Game Designer' },
+      { name: 'Nome 3', role: 'Sound Designer' }
+    ]
+    
   },
   {
     id: 4,
@@ -40,22 +73,18 @@ const games = [
     longDescription: 'Uma experiência imersiva que celebra as contribuições de mulheres negras na história. Explore galerias virtuais e aprenda histórias inspiradoras.',
     tags: ['Educativo', 'Cultural', 'Interativo'],
     image: museumImg,
-  },
-  {
-    id: 5,
-    title: 'Jogo exemplo: Cosmic Runner',
-    description: 'Corrida espacial em alta velocidade.',
-    longDescription: 'Navegue através de nebulosas coloridas e desvie de asteroides neste endless runner espacial. Colete power-ups e quebre recordes.',
-    tags: ['Ação', 'Arcade', 'Espacial'],
-    image: cosmicRunnerImg,
-  },
-  {
-    id: 6,
-    title: 'Jogo exemplo: Code Quest',
-    description: 'Aprenda programação jogando.',
-    longDescription: 'Resolva desafios de programação em um ambiente gamificado. Perfeito para iniciantes que querem aprender lógica e algoritmos de forma divertida.',
-    tags: ['Educativo', 'Programação', 'Puzzle'],
-    image: codeQuestImg,
+    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    playUrl: 'https://itch.io',
+    developmentDates: {
+      start: 'Fevereiro 2025',
+      release: 'Dezembro 2025'
+    },
+    team: [
+      { name: 'Nome 1', role: 'Programador, UI Designer' },
+      { name: 'Nome 2', role: 'Game Designer' },
+      { name: 'Nome 3', role: 'Sound Designer' }
+    ]
+    
   },
 ];
 
@@ -85,7 +114,7 @@ const GameGrid = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 onClick={() => setSelectedGame(game)}
-                className="group cursor-pointer h-full" // Garante que o container ocupe toda altura da grid
+                className="group cursor-pointer h-full"
               >
                 <div className="bg-card border border-border overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 h-full flex flex-col">
                   
