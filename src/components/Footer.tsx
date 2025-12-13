@@ -47,7 +47,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a href="#games" className="text-foreground/70 hover:text-primary transition-colors text-sm">
-                    Jogos
+                    Games
                   </a>
                 </li>
                 <li>
@@ -72,8 +72,8 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="text-foreground/70 hover:text-primary transition-colors text-sm">
-                    Contato
+                  <a href="#media" className="text-foreground/70 hover:text-primary transition-colors text-sm">
+                    Redes
                   </a>
                 </li>
               </ul>

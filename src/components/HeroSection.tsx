@@ -1,12 +1,13 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Gamepad2 } from 'lucide-react';
-import heroImage from '@/assets/hero-pantanal.jpg';
+import { games } from '@/data/Games';
 
 const HeroSection = () => {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const featuredGame = games.find(game => game.isFeatured) || games[0];
   const gameLink = "https://itch.io";
 
   return (
@@ -17,7 +18,7 @@ const HeroSection = () => {
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(${featuredGame.image})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
       </motion.div>
@@ -38,27 +39,23 @@ const HeroSection = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Pantanal World 3D
+            {featuredGame.title}
           </h1>
 
           <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-            <span className="px-3 py-1 bg-primary/10 border border-primary/30 text-primary text-sm font-medium rounded-md">
-              Sandbox
-            </span>
-            <span className="px-3 py-1 bg-primary/10 border border-primary/30 text-primary text-sm font-medium rounded-md">
-              Exploração
-            </span>
-            <span className="px-3 py-1 bg-primary/10 border border-primary/30 text-primary text-sm font-medium rounded-md">
-              Low Poly
-            </span>
+            {featuredGame.tags.map(tag => (
+              <span key={tag} className="px-3 py-1 bg-primary/10 border border-primary/30 text-primary text-sm font-medium rounded-md">
+                {tag}
+              </span>
+            ))}
           </div>
 
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-2xl mx-auto">
-            Uma aventura de exploração e criatividade ambientada no vasto bioma do Pantanal.
+            {featuredGame.description}
           </p>
-
+          
           <Button size="lg" className="gap-3 text-lg px-8 shadow-lg shadow-primary/20" asChild>
-            <a href={gameLink} target="_blank" rel="noopener noreferrer">
+            <a href={featuredGame.playUrl || "#"} target="_blank" rel="noopener noreferrer">
               <Gamepad2 className="w-6 h-6" />
               Jogar Agora
             </a>

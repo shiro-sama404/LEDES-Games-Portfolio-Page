@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Instagram, Youtube } from 'lucide-react';
 
-const ContactSection = () => {
+const MediaSection = () => {
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="media" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,10 +56,10 @@ const ContactSection = () => {
               Fale com nossa equipe
             </p>
             <a 
-              href="mailto:ledes.games@ufms.br" 
+              href="mailto:ledesgames.facom@ufms.br" 
               className="text-primary hover:underline font-medium"
             >
-              ledes.games@ufms.br
+              ledesgames.facom@ufms.br
             </a>
           </motion.div>
 
@@ -119,4 +119,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default MediaSection;

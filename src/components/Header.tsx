@@ -45,13 +45,16 @@ const Header = () => {
               Início
             </button>
             <button onClick={() => scrollToSection('games')} className="text-sm font-medium hover:text-primary transition-colors">
-              Jogos
+              Games
+            </button>
+            <button onClick={() => scrollToSection('research')} className="text-sm font-medium hover:text-primary transition-colors">
+              Pesquisa
             </button>
             <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-primary transition-colors">
               Sobre
             </button>
-            <button onClick={() => scrollToSection('contact')} className="text-sm font-medium hover:text-primary transition-colors">
-              Contato
+            <button onClick={() => scrollToSection('media')} className="text-sm font-medium hover:text-primary transition-colors">
+              Redes
             </button>
           </nav>
 
@@ -74,13 +77,16 @@ const Header = () => {
                 Início
               </button>
               <button onClick={() => scrollToSection('games')} className="text-sm font-medium hover:text-primary py-2">
-                Jogos
+                Games
+              </button>
+              <button onClick={() => scrollToSection('research')} className="text-sm font-medium hover:text-primary py-2">
+                Games
               </button>
               <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-primary py-2">
                 Sobre
               </button>
-              <button onClick={() => scrollToSection('contact')} className="text-sm font-medium hover:text-primary py-2">
-                Contato
+              <button onClick={() => scrollToSection('media')} className="text-sm font-medium hover:text-primary py-2">
+                Redes
               </button>
             </div>
           </nav>

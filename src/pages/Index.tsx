@@ -1,8 +1,9 @@
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import GameGrid from '@/components/GameGrid';
+import ResearchSection from '@/components/ResearchSection';
 import InstitutionalSection from '@/components/InstitutionalSection';
-import ContactSection from '@/components/ContactSection';
+import MediaSection from '@/components/MediaSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -11,8 +12,9 @@ const Index = () => {
       <Header />
       <HeroSection />
       <GameGrid />
+      <ResearchSection />
       <InstitutionalSection />
-      <ContactSection />
+      <MediaSection />
       <Footer />
     </div>
   );

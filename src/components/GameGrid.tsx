@@ -1,95 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { games, Game } from '@/data/Games';
 import GameModal from './GameModal';
-import pantanalWorldImg from '@/assets/game-pantanal-world.jpg';
-import pantanalWordImg from '@/assets/game-pantanal-word.jpg';
-import theseusImg from '@/assets/game-theseus.jpg';
-import museumImg from '@/assets/game-museum.jpg';
-
-const games = [
-  {
-    id: 1,
-    title: 'Pantanal World 3D',
-    description: 'Uma aventura de exploração e criatividade ambientada no bioma do Pantanal.',
-    longDescription: 'Explore um mundo aberto em low poly inspirado no Pantanal brasileiro. Construa, descubra segredos e interaja com a fauna local em uma experiência sandbox única.',
-    tags: ['Sandbox', 'Exploração', 'Low Poly'],
-    image: pantanalWorldImg,
-    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    playUrl: 'https://itch.io',
-    developmentDates: {
-      start: 'Fevereiro 2025',
-      release: 'Dezembro 2025'
-    },
-    team: [
-      { name: 'Nome 1', role: 'Programador, UI Designer' },
-      { name: 'Nome 2', role: 'Game Designer' },
-      { name: 'Nome 3', role: 'Sound Designer' }
-    ]
-  },
-  {
-    id: 2,
-    title: 'Pantanal Word',
-    description: 'Jogo educativo de palavras ambientado no Pantanal.',
-    longDescription: 'Aprenda sobre o vocabulário do Pantanal enquanto se diverte com desafios de palavras. Um jogo educativo que combina aprendizado com entretenimento.',
-    tags: ['Educativo', 'Puzzle', 'Palavras'],
-    image: pantanalWordImg,
-    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    playUrl: 'https://itch.io',
-    developmentDates: {
-      start: 'Fevereiro 2025',
-      release: 'Dezembro 2025'
-    },
-    team: [
-      { name: 'Nome 1', role: 'Programador, UI Designer' },
-      { name: 'Nome 2', role: 'Game Designer' },
-      { name: 'Nome 3', role: 'Sound Designer' }
-    ]
-    
-  },
-  {
-    id: 3,
-    title: "Theseu's Odyssey",
-    description: 'Aventura mitológica inspirada na Grécia Antiga.',
-    longDescription: 'Embarque em uma jornada épica através da mitologia grega. Viva a lendária odisséia de Teseu e enfrente criaturas lendárias! Tudo isso com opções de acessibilidade.',
-    tags: ['Aventura', 'Mitologia', 'Ação'],
-    image: theseusImg,
-    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    playUrl: 'https://itch.io',
-    developmentDates: {
-      start: 'Fevereiro 2025',
-      release: 'Dezembro 2025'
-    },
-    team: [
-      { name: 'Nome 1', role: 'Programador, UI Designer' },
-      { name: 'Nome 2', role: 'Game Designer' },
-      { name: 'Nome 3', role: 'Sound Designer' }
-    ]
-    
-  },
-  {
-    id: 4,
-    title: 'Museu das Mulheres Negras',
-    description: 'Experiência cultural e educativa interativa.',
-    longDescription: 'Uma experiência imersiva que celebra as contribuições de mulheres negras na história. Explore galerias virtuais e aprenda histórias inspiradoras.',
-    tags: ['Educativo', 'Cultural', 'Interativo'],
-    image: museumImg,
-    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    playUrl: 'https://itch.io',
-    developmentDates: {
-      start: 'Fevereiro 2025',
-      release: 'Dezembro 2025'
-    },
-    team: [
-      { name: 'Nome 1', role: 'Programador, UI Designer' },
-      { name: 'Nome 2', role: 'Game Designer' },
-      { name: 'Nome 3', role: 'Sound Designer' }
-    ]
-    
-  },
-];
 
 const GameGrid = () => {
-  const [selectedGame, setSelectedGame] = useState<typeof games[0] | null>(null);
+  const [selectedGame, setSelectedGame] = useState<Game | null>(null);
 
   return (
     <>
@@ -116,40 +31,20 @@ const GameGrid = () => {
                 onClick={() => setSelectedGame(game)}
                 className="group cursor-pointer h-full"
               >
-                <div className="bg-card border border-border overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 h-full flex flex-col">
-                  
-                  <div className="relative aspect-square overflow-hidden shrink-0">
-                    <img
-                      src={game.image}
-                      alt={game.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                      <span className="text-primary font-medium">Ver Detalhes →</span>
+                 <div className="bg-card border border-border overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 h-full flex flex-col">
+                    <div className="relative aspect-square overflow-hidden shrink-0">
+                      <img src={game.image} alt={game.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                     </div>
-                  </div>
-
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                      {game.title}
-                    </h3>
-                    
-                    <p className="text-foreground/70 text-sm mb-4 flex-1">
-                      {game.description}
-                    </p>
-                    
-                    <div className="flex flex-wrap gap-2 mt-auto">
-                      {game.tags.slice(0, 2).map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2 py-1 bg-muted text-xs font-medium"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                    <div className="p-6 flex flex-col flex-1">
+                        <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{game.title}</h3>
+                        <p className="text-foreground/70 text-sm mb-4 flex-1">{game.description}</p>
+                        <div className="flex flex-wrap gap-2 mt-auto">
+                            {game.tags.slice(0, 4).map(tag => (
+                                <span key={tag} className="px-2 py-1 bg-muted text-xs font-medium">{tag}</span>
+                            ))}
+                        </div>
                     </div>
-                  </div>
-                </div>
+                 </div>
               </motion.div>
             ))}
           </div>

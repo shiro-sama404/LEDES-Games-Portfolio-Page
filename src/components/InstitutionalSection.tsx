@@ -12,7 +12,7 @@ const pillars = [
   {
     icon: Lightbulb,
     title: 'Pesquisa & Desenvolvimento',
-    description: 'Metodologias inovadoras em engenharia de software aplicadas a jogos.',
+    description: 'Metodologias inovadoras em engenharia de software aplicadas a games.',
   },
   {
     icon: Users,
@@ -113,11 +113,11 @@ const InstitutionalSection = () => {
               </p>
               <p>
                 Focamos na criação de experiências interativas que combinam entretenimento,
-                educação e pesquisa acadêmica. Nossos projetos exploram desde jogos educacionais
+                educação e pesquisa acadêmica. Nossos projetos exploram desde games educacionais
                 até experiências artísticas experimentais.
               </p>
               <p>
-                Nossa missão é formar desenvolvedores qualificados e produzir jogos que façam
+                Nossa missão é formar desenvolvedores qualificados e produzir games que façam
                 diferença, seja no aprendizado, na preservação cultural ou no puro entretenimento.
               </p>
             </div>
