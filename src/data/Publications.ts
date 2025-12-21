@@ -12,22 +12,42 @@ export interface Publication {
 export const publications: Publication[] = [
   {
     id: 1,
-    title: "Design Sprint aplicada ao desenvolvimento de jogos e gamificações",
-    abstract: "Um estudo de caso sobre o desenvolvimento do game 'Pantanal World'.",
-    authors: "Nome, A., Nome, B.",
-    conference: "SBGames 2026",
-    date: "Novembro 2025",
-    type: "Artigo Completo",
-    link: "#"
+    title: "Pedagogical and Accessibility Guidelines for Digital Educational Games",
+    abstract: "The gaming industry in Brazil has grown progressively in recent years, accompanied by an increase in the demand for accessibility. However, the development of accessible products has not advanced at the same pace, resulting in a significant gap. Problems such as the lack of audio description and subtitles are critical barriers that affect the access, learning, and entertainment provided by digital games. These problems contribute to the social exclusion of people with disabilities.",
+    authors: "Gilvan Junior, Miguel de Albuquerque, Lucas Borth, Michele Soares, Awdren Fontão, Débora Paiva",
+    conference: "SBSI 2025",
+    date: "Maio 2025",
+    type: "Artigo",
+    link: "https://sol.sbc.org.br/index.php/sbsi/article/view/34347/34138"
   },
   {
     id: 2,
-    title: "Acessibilidade em Jogos Digitais",
-    abstract: "Análise das principais técnicas de acessibilidade visual e auditiva utilizadas no jogo Theseu's Odissey.",
-    authors: "Nome, A., Nome, B.",
-    conference: "SBGames  2026",
-    date: "Outubro 2025",
-    type: "Short Paper",
-    link: "#"
+    title: "Pedagogical and Accessibility Guidelines for Digital Educational Games",
+    abstract: "The gaming industry in Brazil has grown progressively in recent years, accompanied by an increase in the demand for accessibility. However, the development of accessible products has not advanced at the same pace, resulting in a significant gap. Problems such as the lack of audio description and subtitles are critical barriers that affect the access, learning, and entertainment provided by digital games. These problems contribute to the social exclusion of people with disabilities.",
+    authors: "Gilvan Junior, Miguel de Albuquerque, Lucas Borth, Michele Soares, Awdren Fontão, Débora Paiva",
+    conference: "SBSI 2025",
+    date: "Maio 2025",
+    type: "Artigo",
+    link: "https://sol.sbc.org.br/index.php/sbsi/article/view/34347/34138"
+  },
+  {
+    id: 3,
+    title: "Pedagogical and Accessibility Guidelines for Digital Educational Games",
+    abstract: "The gaming industry in Brazil has grown progressively in recent years, accompanied by an increase in the demand for accessibility. However, the development of accessible products has not advanced at the same pace, resulting in a significant gap. Problems such as the lack of audio description and subtitles are critical barriers that affect the access, learning, and entertainment provided by digital games. These problems contribute to the social exclusion of people with disabilities.",
+    authors: "Gilvan Junior, Miguel de Albuquerque, Lucas Borth, Michele Soares, Awdren Fontão, Débora Paiva",
+    conference: "SBSI 2025",
+    date: "Maio 2025",
+    type: "Artigo",
+    link: "https://sol.sbc.org.br/index.php/sbsi/article/view/34347/34138"
+  },
+  {
+    id: 4,
+    title: "Pedagogical and Accessibility Guidelines for Digital Educational Games",
+    abstract: "The gaming industry in Brazil has grown progressively in recent years, accompanied by an increase in the demand for accessibility. However, the development of accessible products has not advanced at the same pace, resulting in a significant gap. Problems such as the lack of audio description and subtitles are critical barriers that affect the access, learning, and entertainment provided by digital games. These problems contribute to the social exclusion of people with disabilities.",
+    authors: "Gilvan Junior, Miguel de Albuquerque, Lucas Borth, Michele Soares, Awdren Fontão, Débora Paiva",
+    conference: "SBSI 2025",
+    date: "Maio 2025",
+    type: "Artigo",
+    link: "https://sol.sbc.org.br/index.php/sbsi/article/view/34347/34138"
   },
 ];

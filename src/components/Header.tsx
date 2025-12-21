@@ -80,7 +80,7 @@ const Header = () => {
                 Games
               </button>
               <button onClick={() => scrollToSection('research')} className="text-sm font-medium hover:text-primary py-2">
-                Games
+                Pesquisa
               </button>
               <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-primary py-2">
                 Sobre

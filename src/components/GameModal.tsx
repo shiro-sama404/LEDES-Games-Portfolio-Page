@@ -36,7 +36,8 @@ const GameModal = ({ isOpen, onClose, game }: GameModalProps) => {
   if (!game) return null;
 
   const videoId = getYouTubeId(game.videoUrl);
-  const gameLink = game.playUrl || "https://itch.io/";
+  const gameLink = game.playUrl || "https://itch.io/profile/ledesgames";
+  const isDev = game.released === false;
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -73,12 +74,19 @@ const GameModal = ({ isOpen, onClose, game }: GameModalProps) => {
 
               {/* Botões */}
               <div className="flex gap-3 mt-auto flex-wrap">
-                <Button className="gap-2" asChild>
-                  <a href={gameLink} target="_blank" rel="noopener noreferrer">
+                {isDev ? (
+                  <Button className="gap-2 cursor-not-allowed opacity-80" disabled>
                     <Gamepad2 className="w-4 h-4" />
-                    Jogar Agora
-                  </a>
-                </Button>
+                    Em Breve
+                  </Button>
+                ) : (
+                  <Button className="gap-2" asChild>
+                    <a href={gameLink} target="_blank" rel="noopener noreferrer">
+                      <Gamepad2 className="w-4 h-4" />
+                      Jogar Agora
+                    </a>
+                  </Button>
+                )}
 
                 <Button 
                   variant="outline" 

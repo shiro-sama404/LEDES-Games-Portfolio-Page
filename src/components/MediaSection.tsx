@@ -104,7 +104,7 @@ const MediaSection = () => {
               Assista nossos trailers e gameplays
             </p>
             <a 
-              href="#" 
+              href="https://www.youtube.com/@ledesgames" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-primary hover:underline font-medium"

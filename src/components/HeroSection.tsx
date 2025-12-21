@@ -8,7 +8,7 @@ const HeroSection = () => {
   const y = useTransform(scrollY, [0, 500], [0, 150]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
   const featuredGame = games.find(game => game.isFeatured) || games[0];
-  const gameLink = "https://itch.io";
+  const gameLink = "https://itch.io/profile/ledesgames";
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">

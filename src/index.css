@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
     --background: 220 20% 6%;
@@ -20,8 +16,8 @@ All colors MUST be HSL.
     --primary: 221 83% 53%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 263 70% 57%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 262 88% 57%; 
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 220 15% 15%;
     --muted-foreground: 220 10% 60%;
