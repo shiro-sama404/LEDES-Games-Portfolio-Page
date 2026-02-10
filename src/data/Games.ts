@@ -34,15 +34,15 @@ export const games: Game[] = [
     tags: ['Educativo', 'Cultural', 'Interativo'],
     image: museumImg,
     videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    playUrl: 'https://itch.io/profile/ledesgames',
+    playUrl: 'https://ledesgames.itch.io/mulheres',
     developmentDates: {
       start: 'Fevereiro 2024',
       release: 'Dezembro 2024'
     },
     team: [
-      { name: 'Nome 1', role: 'Programador, UI Designer' },
-      { name: 'Nome 2', role: 'Game Designer' },
-      { name: 'Nome 3', role: 'Sound Designer' }
+      { name: 'Gilvan Ferreira', role: 'Desenvolvimento' },
+      { name: 'Lara Perius', role: 'UI Design, Ilustração' },
+      { name: 'Miguel Albuquerque', role: 'Composição, Sound Design' }
     ]
   },
   {
@@ -55,35 +55,47 @@ export const games: Game[] = [
     tags: ['Educativo', 'Puzzle', 'Palavras'],
     image: pantanalWordImg,
     videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    playUrl: 'https://itch.io/profile/ledesgames',
+    playUrl: 'https://ledesgames.itch.io/pantanal',
     developmentDates: {
       start: 'Fevereiro 2024',
       release: 'Dezembro 2024'
     },
     team: [
-      { name: 'Nome 1', role: 'Programador, UI Designer' },
-      { name: 'Nome 2', role: 'Game Designer' },
-      { name: 'Nome 3', role: 'Sound Designer' }
+      { name: 'Gilvan Ferreira', role: 'Desenvolvimento' },
+      { name: 'Lara Perius', role: 'UI Design, Ilustração' },
+      { name: 'Miguel Albuquerque', role: 'Composição, Sound Design' }
     ]
   },
   {
     id: 3,
-    title: "Theseu's Odyssey",
+    title: "Theseus' Odyssey",
     released: false,
     description: 'Aventura mitológica inspirada na Grécia Antiga.',
     longDescription: 'Embarque em uma jornada épica através da mitologia grega.',
     tags: ['Aventura', 'Mitologia', 'Ação'],
     image: theseusImg,
     videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    playUrl: 'https://itch.io/profile/ledesgames',
+    playUrl: 'https://ledesgames.itch.io/theseus',
     developmentDates: {
       start: 'Março 2025',
-      release: 'Dezembro 2025'
+      release: ''
     },
     team: [
-      { name: 'Nome 1', role: 'Programador, UI Designer' },
-      { name: 'Nome 2', role: 'Game Designer' },
-      { name: 'Nome 3', role: 'Sound Designer' }
+      { name: 'Gilvan Ferreira', role: 'Direção, Desenvolvimento' },
+      { name: 'Lara Perius', role: 'Direção de Arte, UI Design' },
+      { name: 'Miguel Albuquerque', role: 'Direção de Áudio, Composição, Sound Design' },
+      { name: 'Arthur de Andrade', role: 'Ilustração, Animação' },
+      { name: 'Nathan Rezende', role: 'Ilustração, Animação' },
+      { name: 'Pedro Neto', role: 'Ilustração' },
+      { name: 'Vinícius Oliveira', role: 'Ilustração' },
+      { name: 'João Deboni', role: 'Sound Design, Dublagem' },
+      { name: 'Caio Kwiatkoski', role: 'Composição' },
+      { name: 'Guilherme Haddad', role: 'Dublagem' },
+      { name: 'Joana vitória', role: 'Dublagem' },
+      { name: 'Karen Centurion', role: 'Dublagem' },
+      { name: 'Marcelo Henrique', role: 'Dublagem' },
+      { name: 'Monalisa Malheiros', role: 'Dublagem' },
+      { name: 'Vitor Zan', role: 'Dublagem' }
     ]
   },
   {
@@ -96,15 +108,14 @@ export const games: Game[] = [
     tags: ['Sandbox', 'Exploração', 'Low Poly'],
     image: pantanalWorldImg,
     videoUrl: null,
-    playUrl: 'https://itch.io/profile/ledesgames',
+    playUrl: 'https://ledesgames.itch.io/pantanal3d',
     developmentDates: {
-      start: 'Fevereiro 2024',
-      release: 'Dezembro 2024'
+      start: 'Agosto 2025',
+      release: ''
     },
     team: [
-      { name: 'Nome 1', role: 'Programador, UI Designer' },
-      { name: 'Nome 2', role: 'Game Designer' },
-      { name: 'Nome 3', role: 'Sound Designer' }
+      { name: 'Arthur de Andrade', role: 'Desenvolvimento, Modelagem 3D, Ilustração, Animação' },
+      { name: 'Nathan Rezende', role: 'Desenvolvimento,Modelagem 3D, Ilustração, Animação' },
     ]
   },
 ];

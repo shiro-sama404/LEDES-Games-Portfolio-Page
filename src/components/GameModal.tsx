@@ -41,8 +41,8 @@ const GameModal = ({ isOpen, onClose, game }: GameModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto bg-card border-border w-full transition-all duration-300 p-0 overflow-hidden [&>button]:hidden">
-        
+      <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto bg-card border-border w-full transition-all duration-300 p-0 [&>button]:hidden">
+
         <div className="absolute right-1 top-1 z-50">
           <DialogClose className="rounded-full p-2 text-foreground/50 hover:text-foreground transition-colors focus:outline-none">
             <X className="h-5 w-5" />
@@ -50,7 +50,7 @@ const GameModal = ({ isOpen, onClose, game }: GameModalProps) => {
           </DialogClose>
         </div>
 
-        <div className="px-6 pb-6 pt-8 md:px-8 md:pb-8 md:pt-12">
+        <div className="px-6 pb-4 pt-8 md:px-8 md:pb-8 md:pt-12">
           <div className="grid md:grid-cols-2 gap-8">
             
             {/* Informações */}
@@ -84,7 +84,7 @@ const GameModal = ({ isOpen, onClose, game }: GameModalProps) => {
                     <a href={gameLink} target="_blank" rel="noopener noreferrer">
                       <Gamepad2 className="w-4 h-4" />
                       Jogar Agora
-                    </a>
+                    </a>  
                   </Button>
                 )}
 
@@ -152,39 +152,49 @@ const GameModal = ({ isOpen, onClose, game }: GameModalProps) => {
           {/* Detalhes Extras */}
           {showDetails && (
             <div className="mt-8 pt-6 border-t border-border animate-in slide-in-from-top-4 fade-in duration-300">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="flex flex-col gap-6">
+                
+                {/* Cronograma */}
                 <div>
-                  <div className="flex items-center gap-2 mb-4 text-primary">
+                  <div className="flex items-center gap-2 mb-3 text-primary">
                     <Calendar className="w-5 h-5" />
                     <h3 className="font-bold text-lg">Cronograma</h3>
                   </div>
-                  <div className="bg-muted/50 p-4 rounded-md space-y-3">
-                    <div className="flex justify-between border-b border-border/50 pb-2">
+                  
+                  <div className="bg-muted/50 p-4 rounded-md flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-8">
+                    <div className="flex justify-between md:justify-start w-full md:w-auto items-center gap-3">
                       <span className="text-foreground/70 text-sm">Início do Desenvolvimento:</span>
                       <span className="font-medium">{game.developmentDates?.start || "N/A"}</span>
                     </div>
-                    <div className="flex justify-between">
+                    
+                    <div className="hidden md:block h-4 w-px bg-border/50"></div>
+
+                    <div className="flex justify-between md:justify-start w-full md:w-auto items-center gap-3">
                       <span className="text-foreground/70 text-sm">Data de Lançamento:</span>
                       <span className="font-medium">{game.developmentDates?.release || "Em breve"}</span>
                     </div>
                   </div>
                 </div>
 
+                {/* Equipe de Desenvolvimento */}
                 <div>
-                  <div className="flex items-center gap-2 mb-4 text-primary">
+                  <div className="flex items-center gap-2 mb-3 text-primary">
                     <Users className="w-5 h-5" />
                     <h3 className="font-bold text-lg">Equipe de Desenvolvimento</h3>
                   </div>
-                  <div className="bg-muted/50 p-4 rounded-md">
+                  
+                  <div className="bg-muted/50 p-6 rounded-md"> {/* Padding uniforme de 6 */}
                     {game.team && game.team.length > 0 ? (
-                      <ul className="space-y-2">
-                        {game.team.map((member, index) => (
-                          <li key={index} className="flex flex-col sm:flex-row sm:justify-between text-sm">
-                            <span className="font-semibold text-foreground">{member.name}</span>
-                            <span className="text-foreground/60 italic">{member.role}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <div className="pr-2"> {/* Removido max-h e overflow */}
+                        <ul className="space-y-3">
+                          {game.team.map((member, index) => (
+                            <li key={index} className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-border/30 pb-2 last:border-0 last:pb-0">
+                              <span className="font-semibold text-foreground">{member.name}</span>
+                              <span className="text-foreground/60 italic text-right">{member.role}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     ) : (
                       <p className="text-sm text-foreground/60 italic">Informação de equipe não disponível.</p>
                     )}
