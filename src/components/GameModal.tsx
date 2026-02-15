@@ -113,7 +113,7 @@ const GameModal = ({ isOpen, onClose, game }: GameModalProps) => {
                     allowFullScreen
                     className="absolute inset-0 w-full h-full"
                   />
-                  {/* Botão para fechar APENAS o trailer e voltar pra capa */}
+                  {/* Botão para fechar o trailer e voltar pra capa */}
                   <Button
                     size="icon"
                     variant="secondary"
@@ -183,9 +183,9 @@ const GameModal = ({ isOpen, onClose, game }: GameModalProps) => {
                     <h3 className="font-bold text-lg">Equipe de Desenvolvimento</h3>
                   </div>
                   
-                  <div className="bg-muted/50 p-6 rounded-md"> {/* Padding uniforme de 6 */}
+                  <div className="bg-muted/50 p-6 rounded-md">
                     {game.team && game.team.length > 0 ? (
-                      <div className="pr-2"> {/* Removido max-h e overflow */}
+                      <div className="pr-2">
                         <ul className="space-y-3">
                           {game.team.map((member, index) => (
                             <li key={index} className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-border/30 pb-2 last:border-0 last:pb-0">

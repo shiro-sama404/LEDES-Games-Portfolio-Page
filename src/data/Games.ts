@@ -49,7 +49,6 @@ export const games: Game[] = [
     id: 2,
     title: 'Pantanal Word',
     released: true,
-    isFeatured: true, 
     description: 'Jogo educativo de palavras ambientado no Pantanal.',
     longDescription: 'Aprenda sobre o vocabulário do Pantanal enquanto se diverte com desafios de palavras.',
     tags: ['Educativo', 'Puzzle', 'Palavras'],
@@ -69,7 +68,8 @@ export const games: Game[] = [
   {
     id: 3,
     title: "Theseus' Odyssey",
-    released: false,
+    released: true,
+    isFeatured: true, 
     description: 'Aventura mitológica inspirada na Grécia Antiga.',
     longDescription: 'Embarque em uma jornada épica através da mitologia grega.',
     tags: ['Aventura', 'Mitologia', 'Ação'],
